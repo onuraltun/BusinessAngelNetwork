@@ -1,0 +1,1393 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{421309A0-A4C5-4E8E-8400-763423301462}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationIcon>images\template\ban.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.20315, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Kaynak\AjaxControlToolkit\Son\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moxiecode.TinyMCE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\MersinBAN\ban.css" />
+    <Content Include="App_Themes\MersinBAN\images\bg_caption.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\bg_td1.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\bg_td2.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\bg_td3.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\bg_th.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\bg_total.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\button-bg-red.gif" />
+    <Content Include="App_Themes\MersinBAN\images\button-bg.gif" />
+    <Content Include="App_Themes\MersinBAN\images\button-bg_blue.gif" />
+    <Content Include="App_Themes\MersinBAN\images\button-bg_orange.gif" />
+    <Content Include="App_Themes\MersinBAN\images\calendar.gif" />
+    <Content Include="App_Themes\MersinBAN\images\cancel.png" />
+    <Content Include="App_Themes\MersinBAN\images\comment.png" />
+    <Content Include="App_Themes\MersinBAN\images\corner_center.gif" />
+    <Content Include="App_Themes\MersinBAN\images\corner_left.gif" />
+    <Content Include="App_Themes\MersinBAN\images\corner_right.gif" />
+    <Content Include="App_Themes\MersinBAN\images\custom_corners_bottomleft.gif" />
+    <Content Include="App_Themes\MersinBAN\images\custom_corners_bottomright.gif" />
+    <Content Include="App_Themes\MersinBAN\images\custom_corners_rightborder.gif" />
+    <Content Include="App_Themes\MersinBAN\images\custom_corners_topleft.gif" />
+    <Content Include="App_Themes\MersinBAN\images\custom_corners_topright.gif" />
+    <Content Include="App_Themes\MersinBAN\images\door_out.png" />
+    <Content Include="App_Themes\MersinBAN\images\down.png" />
+    <Content Include="App_Themes\MersinBAN\images\exclamation.png" />
+    <Content Include="App_Themes\MersinBAN\images\feed.png" />
+    <Content Include="App_Themes\MersinBAN\images\HaberKategori.png" />
+    <Content Include="App_Themes\MersinBAN\images\hata.png" />
+    <Content Include="App_Themes\MersinBAN\images\header.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\help.png" />
+    <Content Include="App_Themes\MersinBAN\images\house.png" />
+    <Content Include="App_Themes\MersinBAN\images\key.png" />
+    <Content Include="App_Themes\MersinBAN\images\login-bkg-bottom.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\login-bkg-tile.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\menu.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\ok.png" />
+    <Content Include="App_Themes\MersinBAN\images\overlay.png" />
+    <Content Include="App_Themes\MersinBAN\images\popup_bg.jpg" />
+    <Content Include="App_Themes\MersinBAN\images\rightarrow.gif" />
+    <Content Include="App_Themes\MersinBAN\images\shadow.gif" />
+    <Content Include="App_Themes\MersinBAN\images\up.png" />
+    <Content Include="App_Themes\MersinBAN\images\user.png" />
+    <Content Include="App_Themes\MersinBAN\images\uyari.png" />
+    <Content Include="App_Themes\MersinBAN\images\zoom.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewMember.aspx.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewMember.aspx.designer.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dictionary.aspx.cs">
+      <DependentUpon>Dictionary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dictionary.aspx.designer.cs">
+      <DependentUpon>Dictionary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Maillist.aspx.cs">
+      <DependentUpon>Maillist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Maillist.aspx.designer.cs">
+      <DependentUpon>Maillist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Aciklama.ascx.cs">
+      <DependentUpon>Aciklama.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Aciklama.ascx.designer.cs">
+      <DependentUpon>Aciklama.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\AddEventToForum.ascx.cs">
+      <DependentUpon>AddEventToForum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\AddEventToForum.ascx.designer.cs">
+      <DependentUpon>AddEventToForum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\AssesSurvey.ascx.cs">
+      <DependentUpon>AssesSurvey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\AssesSurvey.ascx.designer.cs">
+      <DependentUpon>AssesSurvey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\AddProfessionalFeedback.ascx.cs">
+      <DependentUpon>AddProfessionalFeedback.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\AddProfessionalFeedback.ascx.designer.cs">
+      <DependentUpon>AddProfessionalFeedback.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\NewBusinessIdeas.ascx.cs">
+      <DependentUpon>NewBusinessIdeas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\NewBusinessIdeas.ascx.designer.cs">
+      <DependentUpon>NewBusinessIdeas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ViewMemberShort.ascx.cs">
+      <DependentUpon>ViewMemberShort.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\ViewMemberShort.ascx.designer.cs">
+      <DependentUpon>ViewMemberShort.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CV_Language.ascx.cs">
+      <DependentUpon>CV_Language.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CV_Education.ascx.cs">
+      <DependentUpon>CV_Education.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CV_Education.ascx.designer.cs">
+      <DependentUpon>CV_Education.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CV_Language.ascx.designer.cs">
+      <DependentUpon>CV_Language.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CV_Work.ascx.cs">
+      <DependentUpon>CV_Work.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CV.ascx.cs">
+      <DependentUpon>CV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CV.ascx.designer.cs">
+      <DependentUpon>CV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CV_Work.ascx.designer.cs">
+      <DependentUpon>CV_Work.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Drafts.ascx.cs">
+      <DependentUpon>Drafts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Drafts.ascx.designer.cs">
+      <DependentUpon>Drafts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Article.ascx.cs">
+      <DependentUpon>Article.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Article.ascx.designer.cs">
+      <DependentUpon>Article.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\News.ascx.cs">
+      <DependentUpon>News.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\News.ascx.designer.cs">
+      <DependentUpon>News.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\File.ascx.cs">
+      <DependentUpon>File.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\File.ascx.designer.cs">
+      <DependentUpon>File.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Inbox.ascx.cs">
+      <DependentUpon>Inbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Inbox.ascx.designer.cs">
+      <DependentUpon>Inbox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\MessageMainPanel.ascx.cs">
+      <DependentUpon>MessageMainPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\MessageMainPanel.ascx.designer.cs">
+      <DependentUpon>MessageMainPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\SentMessages.ascx.cs">
+      <DependentUpon>SentMessages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\SentMessages.ascx.designer.cs">
+      <DependentUpon>SentMessages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ShowSurvey.ascx.cs">
+      <DependentUpon>ShowSurvey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\ShowSurvey.ascx.designer.cs">
+      <DependentUpon>ShowSurvey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\SurveyList.ascx.cs">
+      <DependentUpon>SurveyList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\SurveyList.ascx.designer.cs">
+      <DependentUpon>SurveyList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Training.ascx.cs">
+      <DependentUpon>Training.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Training.ascx.designer.cs">
+      <DependentUpon>Training.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\TrashMail.ascx.cs">
+      <DependentUpon>TrashMail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\TrashMail.ascx.designer.cs">
+      <DependentUpon>TrashMail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ViewMember.ascx.cs">
+      <DependentUpon>ViewMember.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Decimal.ascx.cs">
+      <DependentUpon>Decimal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Decimal.ascx.designer.cs">
+      <DependentUpon>Decimal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Events.ascx.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Events.ascx.designer.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Maillist.ascx.cs">
+      <DependentUpon>Maillist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Maillist.ascx.designer.cs">
+      <DependentUpon>Maillist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Member.ascx.cs">
+      <DependentUpon>Member.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Member.ascx.designer.cs">
+      <DependentUpon>Member.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Poll.ascx.cs">
+      <DependentUpon>Poll.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Poll.ascx.designer.cs">
+      <DependentUpon>Poll.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Takvim.ascx.cs">
+      <DependentUpon>Takvim.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Takvim.ascx.designer.cs">
+      <DependentUpon>Takvim.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\TellAFriend.ascx.cs">
+      <DependentUpon>TellAFriend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\TellAFriend.ascx.designer.cs">
+      <DependentUpon>TellAFriend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\TemplateFooter.ascx.cs">
+      <DependentUpon>TemplateFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\TemplateFooter.ascx.designer.cs">
+      <DependentUpon>TemplateFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\TemplateHeader.ascx.cs">
+      <DependentUpon>TemplateHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\TemplateHeader.ascx.designer.cs">
+      <DependentUpon>TemplateHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ViewMember.ascx.designer.cs">
+      <DependentUpon>ViewMember.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ViewProject.ascx.cs">
+      <DependentUpon>ViewProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\ViewProject.ascx.designer.cs">
+      <DependentUpon>ViewProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\WriteMessage.ascx.cs">
+      <DependentUpon>WriteMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\WriteMessage.ascx.designer.cs">
+      <DependentUpon>WriteMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Activation.aspx.designer.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AttendedEvent.aspx.cs">
+      <DependentUpon>AttendedEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\AttendedEvent.aspx.designer.cs">
+      <DependentUpon>AttendedEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Activation.aspx.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ListPages.aspx.cs">
+      <DependentUpon>ListPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ListPages.aspx.designer.cs">
+      <DependentUpon>ListPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewProject.aspx.cs">
+      <DependentUpon>ViewProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewProject.aspx.designer.cs">
+      <DependentUpon>ViewProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MySupervisor.aspx.cs">
+      <DependentUpon>MySupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MySupervisor.aspx.designer.cs">
+      <DependentUpon>MySupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewMemberShort.aspx.cs">
+      <DependentUpon>ViewMemberShort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewMemberShort.aspx.designer.cs">
+      <DependentUpon>ViewMemberShort.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditCV.aspx.cs">
+      <DependentUpon>EditCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditCV.aspx.designer.cs">
+      <DependentUpon>EditCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExportCV.aspx.cs">
+      <DependentUpon>ExportCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ExportCV.aspx.designer.cs">
+      <DependentUpon>ExportCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewCV.aspx.cs">
+      <DependentUpon>ViewCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewCV.aspx.designer.cs">
+      <DependentUpon>ViewCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Drafts.aspx.cs">
+      <DependentUpon>Drafts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Drafts.aspx.designer.cs">
+      <DependentUpon>Drafts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Trash.aspx.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Trash.aspx.designer.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewMember.aspx.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewMember.aspx.designer.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PollResults.aspx.cs">
+      <DependentUpon>PollResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PollResults.aspx.designer.cs">
+      <DependentUpon>PollResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Survey.aspx.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Survey.aspx.designer.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewImage.aspx.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewImage.aspx.designer.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewPage.aspx.designer.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ForgottenPassword.aspx.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ForgottenPassword.aspx.designer.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewPage.aspx.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\Advisors.aspx.cs">
+      <DependentUpon>Advisors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\Advisors.aspx.designer.cs">
+      <DependentUpon>Advisors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\BusinessPlan.aspx.cs">
+      <DependentUpon>BusinessPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\BusinessPlan.aspx.designer.cs">
+      <DependentUpon>BusinessPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\MyInvestor.aspx.cs">
+      <DependentUpon>MyInvestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\MyInvestor.aspx.designer.cs">
+      <DependentUpon>MyInvestor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\inbox.aspx.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\inbox.aspx.designer.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\MyAdvisor.aspx.cs">
+      <DependentUpon>MyAdvisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\MyAdvisor.aspx.designer.cs">
+      <DependentUpon>MyAdvisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrepreneur\Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrepreneur\Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SentMessages.aspx.cs">
+      <DependentUpon>SentMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SentMessages.aspx.designer.cs">
+      <DependentUpon>SentMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hata.aspx.cs">
+      <DependentUpon>Hata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hata.aspx.designer.cs">
+      <DependentUpon>Hata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investor\MyInvestments.aspx.cs">
+      <DependentUpon>MyInvestments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investor\MyInvestments.aspx.designer.cs">
+      <DependentUpon>MyInvestments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investor\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investor\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investor\SearchBusinessIdeas.aspx.cs">
+      <DependentUpon>SearchBusinessIdeas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investor\SearchBusinessIdeas.aspx.designer.cs">
+      <DependentUpon>SearchBusinessIdeas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Araclar.cs" />
+    <Compile Include="Library\CacheHelper.cs" />
+    <Compile Include="Library\MailGonder.cs" />
+    <Compile Include="Library\Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\MasterOfMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\UserSession.cs" />
+    <Compile Include="Admin\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Professional\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Professional\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Professional\MyEntrepreneur.aspx.cs">
+      <DependentUpon>MyEntrepreneur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Professional\MyEntrepreneur.aspx.designer.cs">
+      <DependentUpon>MyEntrepreneur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Professional\ProjectAcception.aspx.cs">
+      <DependentUpon>ProjectAcception.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Professional\ProjectAcception.aspx.designer.cs">
+      <DependentUpon>ProjectAcception.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Professional\SearchBusinessIdeas.aspx.cs">
+      <DependentUpon>SearchBusinessIdeas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Professional\SearchBusinessIdeas.aspx.designer.cs">
+      <DependentUpon>SearchBusinessIdeas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\ShowPicture.aspx.cs">
+      <DependentUpon>ShowPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ShowPicture.aspx.designer.cs">
+      <DependentUpon>ShowPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Polls.aspx.cs">
+      <DependentUpon>Polls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Polls.aspx.designer.cs">
+      <DependentUpon>Polls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\ProjectAcception.aspx.cs">
+      <DependentUpon>ProjectAcception.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\ProjectAcception.aspx.designer.cs">
+      <DependentUpon>ProjectAcception.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\ShowPollOptions.aspx.cs">
+      <DependentUpon>ShowPollOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\ShowPollOptions.aspx.designer.cs">
+      <DependentUpon>ShowPollOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Survey.aspx.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Survey.aspx.designer.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{1A52E82C-979A-4D74-9AF1-C09E91219A6F}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataService\DataService.csproj">
+      <Project>{CD7CF430-B181-4E80-B3B2-7D7160BC6E62}</Project>
+      <Name>DataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Types\Types.csproj">
+      <Project>{E03D045C-69F6-42A5-B3DA-666CBD80BC0D}</Project>
+      <Name>Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Safari.browser" />
+    <None Include="App_Themes\MersinBAN\images\Thumbs.db" />
+    <Content Include="Admin\Upload.aspx" />
+    <Content Include="Admin\ViewMember.aspx" />
+    <Content Include="Admin\Dictionary.aspx" />
+    <Content Include="Admin\Menu.aspx" />
+    <Content Include="Admin\Member.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="App_Themes\MersinBAN\Gridler.css" />
+    <Content Include="App_Themes\MersinBAN\Main.css" />
+    <Content Include="ASCX\AddEventToForum.ascx" />
+    <Content Include="ASCX\AssesSurvey.ascx" />
+    <Content Include="ASCX\AddProfessionalFeedback.ascx" />
+    <Content Include="ASCX\NewBusinessIdeas.ascx" />
+    <Content Include="ASCX\ViewMemberShort.ascx" />
+    <Content Include="ASCX\CV_Language.ascx" />
+    <Content Include="ASCX\CV_Education.ascx" />
+    <Content Include="ASCX\CV_Work.ascx" />
+    <Content Include="ASCX\CV.ascx" />
+    <Content Include="ASCX\Drafts.ascx" />
+    <Content Include="ASCX\Article.ascx" />
+    <Content Include="ASCX\News.ascx" />
+    <Content Include="ASCX\File.ascx" />
+    <Content Include="ASCX\Inbox.ascx" />
+    <Content Include="ASCX\MessageMainPanel.ascx" />
+    <Content Include="ASCX\SentMessages.ascx" />
+    <Content Include="ASCX\ShowSurvey.ascx" />
+    <Content Include="ASCX\SurveyList.ascx" />
+    <Content Include="ASCX\Training.ascx" />
+    <Content Include="ASCX\TrashMail.ascx" />
+    <Content Include="ASCX\ViewMember.ascx" />
+    <Content Include="ASCX\Decimal.ascx" />
+    <Content Include="ASCX\Maillist.ascx" />
+    <Content Include="ASCX\Member.ascx" />
+    <Content Include="ASCX\Menu.ascx" />
+    <Content Include="ASCX\Poll.ascx" />
+    <Content Include="ASCX\TellAFriend.ascx" />
+    <Content Include="ASCX\TemplateFooter.ascx" />
+    <Content Include="ASCX\TemplateHeader.ascx" />
+    <Content Include="ASCX\ViewProject.ascx" />
+    <Content Include="ASCX\WriteMessage.ascx" />
+    <Content Include="bin\Business.pdb" />
+    <Content Include="bin\DataService.pdb" />
+    <Content Include="bin\Moxiecode.TinyMCE.dll" />
+    <Content Include="bin\Types.pdb" />
+    <Content Include="bin\Web.pdb" />
+    <Content Include="Common\AttendedEvent.aspx" />
+    <Content Include="Common\Activation.aspx" />
+    <Content Include="Common\Contact.aspx" />
+    <Content Include="Common\ChangePassword.aspx" />
+    <Content Include="Common\ListPages.aspx" />
+    <Content Include="Common\ViewProject.aspx" />
+    <Content Include="Common\MySupervisor.aspx" />
+    <Content Include="Common\ViewMemberShort.aspx" />
+    <Content Include="Common\EditCV.aspx" />
+    <Content Include="Common\ExportCV.aspx" />
+    <Content Include="Common\UpdateProfile.aspx" />
+    <Content Include="Common\ViewCV.aspx" />
+    <Content Include="Common\Drafts.aspx" />
+    <Content Include="Common\Search.aspx" />
+    <Content Include="Common\Trash.aspx" />
+    <Content Include="Common\ViewMember.aspx" />
+    <Content Include="Common\Logout.aspx" />
+    <Content Include="Common\PollResults.aspx" />
+    <Content Include="Common\Register.aspx" />
+    <Content Include="Common\Survey.aspx" />
+    <Content Include="Common\ViewImage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Entrepreneur\Advisors.aspx" />
+    <Content Include="Entrepreneur\BusinessPlan.aspx" />
+    <Content Include="Entrepreneur\MyInvestor.aspx" />
+    <Content Include="Entrepreneur\Default.aspx" />
+    <Content Include="Common\inbox.aspx" />
+    <Content Include="Common\SentMessages.aspx" />
+    <Content Include="Entrepreneur\MyAdvisor.aspx" />
+    <Content Include="Hata.aspx" />
+    <Content Include="images\accept.png" />
+    <Content Include="images\adim.gif" />
+    <Content Include="images\adimsonuk.gif" />
+    <Content Include="images\AnketSonuc.jpg" />
+    <Content Include="images\banner\eng-1.png" />
+    <Content Include="images\banner\eng-2_01.png" />
+    <Content Include="images\banner\eng-2_02.png" />
+    <Content Include="images\banner\eng-2_03.png" />
+    <Content Include="images\banner\eng-3_01.png" />
+    <Content Include="images\banner\eng-3_02.png" />
+    <Content Include="images\banner\eng-3_03.png" />
+    <Content Include="images\banner\eng-3_04.png" />
+    <Content Include="images\banner\eng-3_05.png" />
+    <Content Include="images\banner\eng-3_06.png" />
+    <Content Include="images\banner\eng-3_07.png" />
+    <Content Include="images\banner\eng-3_08.png" />
+    <Content Include="images\banner\eng-3_09.png" />
+    <Content Include="images\banner\eng-3_10.png" />
+    <Content Include="images\banner\eng-3_11.png" />
+    <Content Include="images\banner\eng-3_12.png" />
+    <Content Include="images\banner\eng-4_01.png" />
+    <Content Include="images\banner\eng-4_02.png" />
+    <Content Include="images\banner\eng-4_03.png" />
+    <Content Include="images\banner\eng-5_01.png" />
+    <Content Include="images\banner\eng-5_02.png" />
+    <Content Include="images\banner\eng-5_03.png" />
+    <Content Include="images\banner\eng-5_04.png" />
+    <Content Include="images\banner\eng-5_05.png" />
+    <Content Include="images\banner\eng-5_06.png" />
+    <Content Include="images\banner\eng-5_07.png" />
+    <Content Include="images\banner\eng-5_08.png" />
+    <Content Include="images\banner\eng-5_09.png" />
+    <Content Include="images\banner\eng-5_10.png" />
+    <Content Include="images\banner\eng-5_11.png" />
+    <Content Include="images\banner\eng-5_12.png" />
+    <Content Include="images\banner\eng-6_01.png" />
+    <Content Include="images\banner\eng-6_02.png" />
+    <Content Include="images\banner\eng-6_03.png" />
+    <Content Include="images\banner\eng-7_01.png" />
+    <Content Include="images\banner\eng-7_02.png" />
+    <Content Include="images\banner\eng-7_03.png" />
+    <Content Include="images\banner\eng-7_04.png" />
+    <Content Include="images\banner\eng-7_05.png" />
+    <Content Include="images\banner\eng-7_06.png" />
+    <Content Include="images\banner\eng-7_07.png" />
+    <Content Include="images\banner\eng-7_08.png" />
+    <Content Include="images\banner\eng-7_09.png" />
+    <Content Include="images\banner\eng-7_10.png" />
+    <Content Include="images\banner\eng-7_11.png" />
+    <Content Include="images\banner\eng-7_12.png" />
+    <Content Include="images\banner\kayit_01.png" />
+    <Content Include="images\banner\kayit_02.png" />
+    <Content Include="images\banner\kayit_03.png" />
+    <Content Include="images\banner\kayit_04.png" />
+    <Content Include="images\banner\kayit_05.png" />
+    <Content Include="images\banner\register_01.png" />
+    <Content Include="images\banner\register_02.png" />
+    <Content Include="images\banner\register_03.png" />
+    <Content Include="images\banner\register_04.png" />
+    <Content Include="images\banner\register_05.png" />
+    <Content Include="images\banner\tr-1.png" />
+    <Content Include="images\banner\tr-2_01.png" />
+    <Content Include="images\banner\tr-2_02.png" />
+    <Content Include="images\banner\tr-2_03.png" />
+    <Content Include="images\banner\tr-3_01.png" />
+    <Content Include="images\banner\tr-3_02.png" />
+    <Content Include="images\banner\tr-3_03.png" />
+    <Content Include="images\banner\tr-3_04.png" />
+    <Content Include="images\banner\tr-3_05.png" />
+    <Content Include="images\banner\tr-3_06.png" />
+    <Content Include="images\banner\tr-3_07.png" />
+    <Content Include="images\banner\tr-3_08.png" />
+    <Content Include="images\banner\tr-3_09.png" />
+    <Content Include="images\banner\tr-3_10.png" />
+    <Content Include="images\banner\tr-3_11.png" />
+    <Content Include="images\banner\tr-4_01.png" />
+    <Content Include="images\banner\tr-4_02.png" />
+    <Content Include="images\banner\tr-4_03.png" />
+    <Content Include="images\banner\tr-5_01.png" />
+    <Content Include="images\banner\tr-5_02.png" />
+    <Content Include="images\banner\tr-5_03.png" />
+    <Content Include="images\banner\tr-5_04.png" />
+    <Content Include="images\banner\tr-5_05.png" />
+    <Content Include="images\banner\tr-5_06.png" />
+    <Content Include="images\banner\tr-5_07.png" />
+    <Content Include="images\banner\tr-5_08.png" />
+    <Content Include="images\banner\tr-5_09.png" />
+    <Content Include="images\banner\tr-5_10.png" />
+    <Content Include="images\banner\tr-5_11.png" />
+    <Content Include="images\banner\tr-6_01.png" />
+    <Content Include="images\banner\tr-6_02.png" />
+    <Content Include="images\banner\tr-6_03.png" />
+    <Content Include="images\banner\tr-7_01.png" />
+    <Content Include="images\banner\tr-7_02.png" />
+    <Content Include="images\banner\tr-7_03.png" />
+    <Content Include="images\banner\tr-7_04.png" />
+    <Content Include="images\banner\tr-7_05.png" />
+    <Content Include="images\banner\tr-7_06.png" />
+    <Content Include="images\banner\tr-7_07.png" />
+    <Content Include="images\banner\tr-7_08.png" />
+    <Content Include="images\banner\tr-7_09.png" />
+    <Content Include="images\banner\tr-7_10.png" />
+    <Content Include="images\banner\tr-7_11.png" />
+    <Content Include="images\banner\tr-7_12.png" />
+    <Content Include="images\basari.png" />
+    <Content Include="images\bilgi.png" />
+    <Content Include="images\bottom_bg.jpg" />
+    <Content Include="images\bottom_left.jpg" />
+    <Content Include="images\bottom_right.jpg" />
+    <Content Include="images\bplan.png" />
+    <Content Include="images\collapse.jpg" />
+    <Content Include="images\dolar.png" />
+    <Content Include="images\down.jpg" />
+    <Content Include="images\EmptyStar.png" />
+    <Content Include="images\excel.jpg" />
+    <Content Include="images\europass.jpg" />
+    <Content Include="images\expand.jpg" />
+    <Content Include="images\FilledStar.png" />
+    <Content Include="images\gird_td.jpg" />
+    <Content Include="images\giris.jpg" />
+    <Content Include="images\hata.png" />
+    <Content Include="images\left_main_bg.jpg" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\login_bg.jpg" />
+    <Content Include="images\login_bg_en.jpg" />
+    <Content Include="images\login_bg_tr.jpg" />
+    <Content Include="images\main_top_bg.jpg" />
+    <Content Include="images\menu_ara_bg.jpg" />
+    <Content Include="images\menu_bg.jpg" />
+    <Content Include="images\news_bg.jpg" />
+    <Content Include="images\nologo3.jpg" />
+    <Content Include="images\nologo4.jpg" />
+    <Content Include="images\professional.png" />
+    <Content Include="images\newmsg.png" />
+    <Content Include="images\ppt.JPG" />
+    <Content Include="images\right_main_bg.jpg" />
+    <Content Include="images\save.jpg" />
+    <Content Include="images\SavedStar.png" />
+    <Content Include="images\template\1e.png" />
+    <Content Include="images\template\1t.png" />
+    <Content Include="images\template\2e.png" />
+    <Content Include="images\template\2t.png" />
+    <Content Include="images\template\3e.png" />
+    <Content Include="images\template\3t.png" />
+    <Content Include="images\template\4e.png" />
+    <Content Include="images\template\4t.png" />
+    <Content Include="images\template\ban.ico" />
+    <Content Include="images\template\baslik.gif" />
+    <Content Include="images\template\contactusENGLISH.gif" />
+    <Content Include="images\template\day.png" />
+    <Content Include="images\template\footer_07.png" />
+    <Content Include="images\template\footer_08.png" />
+    <Content Include="images\template\footer_09.png" />
+    <Content Include="images\template\footer_10.png" />
+    <Content Include="images\template\footer_11.png" />
+    <Content Include="images\template\footer_12.png" />
+    <Content Include="images\template\footer_13.png" />
+    <Content Include="images\template\footer_14.png" />
+    <Content Include="images\template\home-sliced-eng_06.png" />
+    <Content Include="images\template\home-sliced-tr-new_06.gif" />
+    <Content Include="images\template\home-sliced-tr_02.png" />
+    <Content Include="images\template\home-sliced-tr_04.png" />
+    <Content Include="images\template\home-sliced-tr_10.gif" />
+    <Content Include="images\template\pembe.png" />
+    <Content Include="images\template\Professional_pg_logged-in-sliced-new_04.gif" />
+    <Content Include="images\template\Professional_pg_logged-in-sliced-new_06.gif" />
+    <Content Include="images\template\spacer.gif" />
+    <Content Include="Admin\Event.aspx" />
+    <Content Include="Admin\Maillist.aspx" />
+    <Content Include="Admin\Page.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Business.dll" />
+    <Content Include="ASCX\Events.ascx" />
+    <Content Include="Common\ForgottenPassword.aspx" />
+    <Content Include="bin\DataService.dll" />
+    <Content Include="bin\Types.dll" />
+    <Content Include="bin\Web.dll" />
+    <Content Include="images\banner.swf" />
+    <Content Include="images\nologo.jpg" />
+    <Content Include="Common\Login.aspx" />
+    <Content Include="Common\ViewPage.aspx" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_056b93_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="App_Themes\MersinBAN\ui.all.css" />
+    <Content Include="App_Themes\MersinBAN\ui.base.css" />
+    <Content Include="App_Themes\MersinBAN\ui.core.css" />
+    <Content Include="App_Themes\MersinBAN\ui.datepicker.css" />
+    <Content Include="App_Themes\MersinBAN\ui.theme.css" />
+    <Content Include="ASCX\Aciklama.ascx" />
+    <Content Include="ASCX\Takvim.ascx" />
+    <Content Include="Entrepreneur\Project.aspx" />
+    <Content Include="images\add.png" />
+    <Content Include="images\ara.gif" />
+    <Content Include="images\boxy-ne.png" />
+    <Content Include="images\boxy-nw.png" />
+    <Content Include="images\boxy-se.png" />
+    <Content Include="images\boxy-sw.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\detaylar.gif" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\exclamation.png" />
+    <Content Include="images\ic-searchsmall.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\mail.png" />
+    <Content Include="images\media.PNG" />
+    <Content Include="images\print.gif" />
+    <Content Include="images\tarih.png" />
+    <Content Include="images\top_bg.jpg" />
+    <Content Include="images\top_bg_tit.jpg" />
+    <Content Include="images\transparent.gif" />
+    <Content Include="images\underwater.swf" />
+    <Content Include="images\underwater_tr.swf" />
+    <Content Include="images\up.jpg" />
+    <Content Include="images\update.gif" />
+    <Content Include="images\upload.jpg" />
+    <Content Include="images\uyari.png" />
+    <Content Include="images\word.jpg" />
+    <Content Include="images\yeni.gif" />
+    <Content Include="Investor\MyInvestments.aspx" />
+    <Content Include="Investor\Default.aspx" />
+    <Content Include="Investor\SearchBusinessIdeas.aspx" />
+    <Content Include="js\flash.js" />
+    <Content Include="js\genel.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.ui.js" />
+    <Content Include="js\tiny_mce\langs\en.js" />
+    <Content Include="js\tiny_mce\license.txt" />
+    <Content Include="js\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="js\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="js\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="js\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="js\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="js\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="js\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="js\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\media\media.htm" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="js\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="js\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\preview\example.html" />
+    <Content Include="js\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="js\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\safari\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="js\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="js\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\style\props.htm" />
+    <Content Include="js\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="js\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="js\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="js\tiny_mce\plugins\table\row.htm" />
+    <Content Include="js\tiny_mce\plugins\table\table.htm" />
+    <Content Include="js\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="js\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\template\template.htm" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="js\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="js\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\tiny_mce.js" />
+    <Content Include="js\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="js\tiny_mce\tiny_mce_src.js" />
+    <Content Include="js\tiny_mce\utils\editable_selects.js" />
+    <Content Include="js\tiny_mce\utils\form_utils.js" />
+    <Content Include="js\tiny_mce\utils\mctabs.js" />
+    <Content Include="js\tiny_mce\utils\validate.js" />
+    <Content Include="js\tooltip.js" />
+    <Content Include="Admin\Log.aspx" />
+    <Content Include="Professional\Default.aspx" />
+    <Content Include="Common\ShowPicture.aspx" />
+    <Content Include="Professional\MyEntrepreneur.aspx" />
+    <Content Include="Professional\ProjectAcception.aspx" />
+    <Content Include="Professional\SearchBusinessIdeas.aspx" />
+    <Content Include="Supervisor\Default.aspx" />
+    <Content Include="Supervisor\Polls.aspx" />
+    <Content Include="Supervisor\ProjectAcception.aspx" />
+    <Content Include="Supervisor\Projects.aspx" />
+    <Content Include="Supervisor\ShowPollOptions.aspx" />
+    <Content Include="Supervisor\Survey.aspx" />
+    <Content Include="Template.Master" />
+    <Content Include="TransformXSLT.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CV.rdlc" />
+    <EmbeddedResource Include="Reports\rptBusinessPlan.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4153</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/MersinBAN</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

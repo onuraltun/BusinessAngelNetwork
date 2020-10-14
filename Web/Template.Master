@@ -1,0 +1,187 @@
+<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Template.master.cs" Inherits="Web.Template" %>
+
+<%@ Register Src="ASCX/Menu.ascx" TagName="Menu" TagPrefix="uc2" %>
+<%@ Register Src="ASCX/TemplateFooter.ascx" TagName="TemplateFooter" TagPrefix="uc3" %>
+<%@ Register Src="ASCX/TemplateHeader.ascx" TagName="TemplateHeader" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mersin BAN</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1254" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <link rel="shortcut icon" href="/images/template/ban.ico">
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/MersinBAN/ui.all.css" media="screen" />
+
+    <script type="text/javascript">
+
+        function Page_Loaded() {
+            BoyutlariDuzenle();
+            document.getElementById("tbYukleniyor").style.display = "none";
+        }
+
+        function Page_UnLoad() {
+            BoyutlariDuzenle();
+            document.getElementById("tbYukleniyor").style.display = "";
+            return true;
+        }
+
+        function BoyutlariDuzenle() {
+            if (navigator.userAgent.indexOf("MSIE") > -1) {
+                document.getElementById("tdYukleniyor").style.height = document.documentElement.scrollHeight + 200;
+                document.getElementById("tdYukleniyor").style.width = document.documentElement.scrollWidth + 200;
+            }
+            else if (navigator.userAgent.indexOf("Firefox") > -1) {
+                document.getElementById("tdYukleniyor").height = document.documentElement.scrollHeight;
+                document.getElementById("tdYukleniyor").width = document.documentElement.scrollWidth;
+            }
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table id="tbYukleniyor" style="display: none; position: absolute; margin-left: 0;
+        margin-top: 0; z-index: 1000;" border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+            <td id="tdYukleniyor" align="center" style="background: url(/images/transparent.gif);">
+                <img src="/images/loading.gif" alt="Yükleniyor, lütfen bekleyiniz..." /><br />
+                Yükleniyor...
+                <img src="/images/loading.gif" alt="Yükleniyor, lütfen bekleyiniz..." /><br />
+                Yükleniyor...
+            </td>
+        </tr>
+    </table>
+    <asp:Panel runat="server" ID="pnlMain" Width="100%">
+        <form id="form1" runat="server">
+        <div align="center">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            </asp:UpdatePanel>
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="vertical-align: top">
+            <tr>
+                <td align="center">
+                    <table width="984" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="MainLeft">
+                            </td>
+                            <td align="left" valign="top">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="vertical-align: top">
+                                    <tr>
+                                        <td>
+                                            <table id="Table_111" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td class="MainTop">
+                                                        &nbsp
+                                                        <asp:Literal runat="server" ID="ltSlogan"></asp:Literal>
+                                                    </td>
+                                                    <td width="298" class="MainTop">
+                                                        <asp:TextBox runat="server" ID="txtSearch" Font-Size="Smaller" Height="10px"></asp:TextBox>
+                                                        <asp:ImageButton runat="server" ID="ibSearch" ImageUrl="/Images/Template/home-sliced-eng_06.png"
+                                                            ImageAlign="AbsBottom" PostBackUrl="/Common/Search.aspx" />
+                                                        <asp:DropDownList runat="server" ID="ddlLanguage" Font-Size="Smaller" Height="16px"
+                                                            OnSelectedIndexChanged="ddlLanguage_SelectedIndexChanged" AutoPostBack="true">
+                                                            <asp:ListItem Text="Choose Your Language" Value="0"></asp:ListItem>
+                                                            <asp:ListItem Text="Türkçe" Value="1"></asp:ListItem>
+                                                            <asp:ListItem Text="English" Value="2"></asp:ListItem>
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="0px">
+                                            <img runat="server" id="iBanner" imageurl="/images/banner/tr-1.png"
+                                                width="960" height="74" alt="" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="Menu">
+                                            <uc2:Menu ID="Menu1" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" align="center">
+                                            <uc4:TemplateHeader ID="TemplateHeader1" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="MenuAra">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="390" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="960">
+                                                <tr>
+                                                    <td align="left">
+                                                        <asp:ContentPlaceHolder ID="ctphTable" Visible="true" runat="server">
+                                                            <table id="Table2" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td width="230" valign="top" style="padding-left: 10px;">
+                                                                        <asp:ContentPlaceHolder ID="ctphLeft" runat="server">
+                                                                        </asp:ContentPlaceHolder>
+                                                                    </td>
+                                                                    <td width="10" valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                    <td width="480" valign="top">
+                                                                        <asp:ContentPlaceHolder ID="ctphMiddle" runat="server">
+                                                                        </asp:ContentPlaceHolder>
+                                                                    </td>
+                                                                    <td width="10" valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                    <td width="230" valign="top" style="padding-right: 10px;">
+                                                                        <asp:ContentPlaceHolder ID="ctphRight" runat="server">
+                                                                        </asp:ContentPlaceHolder>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </asp:ContentPlaceHolder>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="MainRight">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="BottomLeft">
+                            </td>
+                            <td class="Bottom">
+                            </td>
+                            <td class="BottomRight">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <uc3:TemplateFooter ID="TemplateFooter1" runat="server" />
+                </td>
+            </tr>
+        </table>
+        <center>
+            <table border="0" width="980">
+                <tr>
+                    <td align="left">
+                        <asp:Literal runat="server" ID="ltCopyright"></asp:Literal>
+                    </td>
+                    <td align="right">
+                        Web design by: <a href="http://www.bilgibahcesi.com">biba</a> | <a href="http://www.webzfusion.com">
+                            Webz Fusion</a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        </form>
+    </asp:Panel>
+</body>
+</html>

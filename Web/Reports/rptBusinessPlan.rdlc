@@ -1,0 +1,1771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>7b1ec3ca-0a53-488a-ba7f-a91af849e4c1</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="ProjectName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ProjectName</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="NAME">
+        <rd:DefaultName>NAME</rd:DefaultName>
+        <Width>18.5cm</Width>
+        <Style>
+          <Color>Goldenrod</Color>
+          <FontSize>14pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>= Parameters!ProjectName.Value</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <rd:ReportID>9f0a3ae1-3476-4bf8-b06c-4741b5e0ea91</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DSProjectBusinessPlan_PROJECT_BUSINESS_PLAN">
+      <Fields>
+        <Field Name="RECID">
+          <DataField>RECID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PROJECTID">
+          <DataField>PROJECTID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="A1a">
+          <DataField>A1a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A1b">
+          <DataField>A1b</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A1c">
+          <DataField>A1c</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A1d">
+          <DataField>A1d</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A2a">
+          <DataField>A2a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A2b">
+          <DataField>A2b</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="A2c">
+          <DataField>A2c</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B1">
+          <DataField>B1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B2">
+          <DataField>B2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B3">
+          <DataField>B3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B4a">
+          <DataField>B4a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B4b">
+          <DataField>B4b</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B4c">
+          <DataField>B4c</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B5">
+          <DataField>B5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="B6">
+          <DataField>B6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="C1">
+          <DataField>C1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="C2">
+          <DataField>C2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="C3">
+          <DataField>C3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="D1">
+          <DataField>D1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="D2">
+          <DataField>D2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E1">
+          <DataField>E1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E2">
+          <DataField>E2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E3">
+          <DataField>E3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E4">
+          <DataField>E4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E5">
+          <DataField>E5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="F1">
+          <DataField>F1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="F2">
+          <DataField>F2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="G1">
+          <DataField>G1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="H1">
+          <DataField>H1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="H2">
+          <DataField>H2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="I1">
+          <DataField>I1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="I2">
+          <DataField>I2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="I3">
+          <DataField>I3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="I4">
+          <DataField>I4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="I5">
+          <DataField>I5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="J1">
+          <DataField>J1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="J2">
+          <DataField>J2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="K1">
+          <DataField>K1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="L1">
+          <DataField>L1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="M1">
+          <DataField>M1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:ObjectDataSourceType>Types.TypeDataSets.DSProjectBusinessPlan, Types, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceSelectMethod>Clone</rd:ObjectDataSourceSelectMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>20cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox94">
+        <Top>104cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>96</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!M1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox95">
+        <Top>103.24996cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>95</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1-What is your estimate expense accurately for startup? (Explain item by item).</Value>
+      </Textbox>
+      <Textbox Name="textbox96">
+        <Top>102.49999cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>94</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>M- Startup Expenses and Capitalization</Value>
+      </Textbox>
+      <Textbox Name="textbox88">
+        <Top>100.99999cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>93</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!L1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox89">
+        <Top>99.24997cm</Top>
+        <Width>13.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>92</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.50003cm</Height>
+        <Value>1. Explain the daily operation of the business with its equipment, human resources,
+processes, and surrounding environment; (Legal Environment, Personnel, Inventory,
+Suppliers, and Credit Policies).</Value>
+      </Textbox>
+      <Textbox Name="textbox93">
+        <Top>98.49999cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>91</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>L. Operational Plan</Value>
+      </Textbox>
+      <Textbox Name="textbox90">
+        <Top>97cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>90</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!K1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox91">
+        <Top>96.24997cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>89</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. Prepare a month-by-month sales forecast projection for one year.</Value>
+      </Textbox>
+      <Textbox Name="textbox92">
+        <Top>95.5cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>88</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>K. Sales Forecast</Value>
+      </Textbox>
+      <Textbox Name="textbox83">
+        <Top>94cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>87</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!J2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox84">
+        <Top>93.24998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>86</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. Do you need distribution channels? If yes, explain.</Value>
+      </Textbox>
+      <Textbox Name="textbox85">
+        <Top>91.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>85</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!J1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox86">
+        <Top>90.99998cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>84</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. Describe your physical location needs for your business idea.(“why and what”)</Value>
+      </Textbox>
+      <Textbox Name="textbox87">
+        <Top>90.25cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>83</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>J. Proposed Location</Value>
+      </Textbox>
+      <Textbox Name="textbox72">
+        <Top>88.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>82</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!I5.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox73">
+        <Top>87.99998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>81</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>5. How much money do you need to process your strategy?</Value>
+      </Textbox>
+      <Textbox Name="textbox74">
+        <Top>86.50001cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>80</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!I4.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox75">
+        <Top>85.74998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>79</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>4. How is your pricing strategy for your product?</Value>
+      </Textbox>
+      <Textbox Name="textbox76">
+        <Top>84.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>78</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!I3.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox77">
+        <Top>83.49999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>77</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>3. How will you get the word out to customers?</Value>
+      </Textbox>
+      <Textbox Name="textbox78">
+        <Top>82.00001cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>76</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!I2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox79">
+        <Top>81.24999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>75</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. How do you sell your products or services? (Such as promotion or advertisement strategy)</Value>
+      </Textbox>
+      <Textbox Name="textbox80">
+        <Top>79.74999cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>74</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!I1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox81">
+        <Top>78.99999cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>73</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. What is your marketing strategy?</Value>
+      </Textbox>
+      <Textbox Name="textbox82">
+        <Top>78.25cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>72</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>I. Strategy</Value>
+      </Textbox>
+      <Textbox Name="textbox67">
+        <Top>76.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>71</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!H2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox68">
+        <Top>75.99998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>70</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. What is your competition advantage of your product?</Value>
+      </Textbox>
+      <Textbox Name="textbox69">
+        <Top>74.5cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>69</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!H1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox70">
+        <Top>73.74998cm</Top>
+        <Width>9.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>68</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. What products and companies will compete with you?</Value>
+      </Textbox>
+      <Textbox Name="textbox71">
+        <Top>73cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>67</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>H. Competition</Value>
+      </Textbox>
+      <Textbox Name="textbox64">
+        <Top>71.5cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>66</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!G1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox65">
+        <Top>70.74998cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>65</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. Identify your targeted customers.</Value>
+      </Textbox>
+      <Textbox Name="textbox66">
+        <Top>70cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>64</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>G. Customers</Value>
+      </Textbox>
+      <Textbox Name="textbox59">
+        <Top>68.49999cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>63</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!F2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox60">
+        <Top>67.74998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>62</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. What after-sale services will you give?</Value>
+      </Textbox>
+      <Textbox Name="textbox61">
+        <Top>66.24999cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>61</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!F1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox62">
+        <Top>65.49998cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>60</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. What are the features and benefits of your product?</Value>
+      </Textbox>
+      <Textbox Name="textbox63">
+        <Top>64.74999cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>59</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>F. Product</Value>
+      </Textbox>
+      <Textbox Name="textbox55">
+        <Top>63.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>58</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!E5.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox56">
+        <Top>62.49999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>57</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>5. What type of barriers to entry do you face in entering this market?</Value>
+      </Textbox>
+      <Textbox Name="textbox57">
+        <Top>61.00001cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>56</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!E4.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox58">
+        <Top>60.24999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>55</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>4. What is the growth potential and opportunity for a business of your size?</Value>
+      </Textbox>
+      <Textbox Name="textbox48">
+        <Top>58.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>54</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!E3.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox49">
+        <Top>58cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>53</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>3. What is the current demand in target market? And what will be (target trend)?</Value>
+      </Textbox>
+      <Textbox Name="textbox50">
+        <Top>56.50001cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>52</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!E2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox51">
+        <Top>55.74999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>51</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. What percent share of the market will you have?</Value>
+      </Textbox>
+      <Textbox Name="textbox52">
+        <Top>54.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>50</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!E1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox53">
+        <Top>53.49999cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>49</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. What is the total size of your market?</Value>
+      </Textbox>
+      <Textbox Name="textbox54">
+        <Top>52.75cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>48</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>E. Economics</Value>
+      </Textbox>
+      <Textbox Name="textbox43">
+        <Top>51.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>47</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!D2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox44">
+        <Top>50.49998cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>46</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. How do you plan to sell your products or services?</Value>
+      </Textbox>
+      <Textbox Name="textbox45">
+        <Top>49cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>45</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!D1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox46">
+        <Top>47.49998cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>44</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25002cm</Height>
+        <Value>1. Explain your marketing plan (In your marketing plan, be as specific as possible; give statistics, numbers, and sources).</Value>
+      </Textbox>
+      <Textbox Name="textbox47">
+        <Top>46.75cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>43</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>D. Marketing Plan</Value>
+      </Textbox>
+      <Textbox Name="textbox41">
+        <Top>45.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>42</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!C3.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox42">
+        <Top>44.5cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>41</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>3. What are the pricing, fee, or leasing structures of your products or services?</Value>
+      </Textbox>
+      <Textbox Name="textbox39">
+        <Top>43cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>40</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!C2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox40">
+        <Top>42.24999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>39</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. What factors will give you competitive advantages or disadvantages?</Value>
+      </Textbox>
+      <Textbox Name="textbox36">
+        <Top>40.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>38</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!C1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox37">
+        <Top>39.99999cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>37</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. Describe in depth your products or services.</Value>
+      </Textbox>
+      <Textbox Name="textbox38">
+        <Top>39.25cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>36</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>C. Products and Services</Value>
+      </Textbox>
+      <Textbox Name="textbox34">
+        <Top>37.75cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>35</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B6.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox35">
+        <Top>37cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>34</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>6. What do you think your major competitive strengths will be?</Value>
+      </Textbox>
+      <Textbox Name="textbox33">
+        <Top>35.5cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>33</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B5.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox32">
+        <Top>34.74999cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>32</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>5. Describe your most important company strengths and core competencies.</Value>
+      </Textbox>
+      <Textbox Name="textbox30">
+        <Top>32.49999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>31</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>c. How will your company be poised to take advantage of them?</Value>
+      </Textbox>
+      <Textbox Name="textbox31">
+        <Top>33.25cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>30</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B4c.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox28">
+        <Top>30.25cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>29</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>b. What changes do you foresee in the industry, short term and long term?</Value>
+      </Textbox>
+      <Textbox Name="textbox29">
+        <Top>30.99999cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>28</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B4b.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox27">
+        <Top>28cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>27</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>a. Is it a growth industry?</Value>
+      </Textbox>
+      <Textbox Name="textbox23">
+        <Top>28.75cm</Top>
+        <Width>15.5cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>26</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B4a.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox24">
+        <Top>27.25cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>4. Describe your industry.</Value>
+      </Textbox>
+      <Textbox Name="textbox25">
+        <Top>25.75cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>24</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B3.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox26">
+        <Top>25cm</Top>
+        <Width>10.75cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>23</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>3. Business Philosophy: What is important to you in business?</Value>
+      </Textbox>
+      <Textbox Name="textbox18">
+        <Top>23.5cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>22</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox20">
+        <Top>22.75cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>21</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. Company Goals and Objectives?</Value>
+      </Textbox>
+      <Textbox Name="textbox19">
+        <Top>21.25cm</Top>
+        <Width>16cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!B1.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <Top>20.5cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. What business will you be in? What will you do?</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <Top>19.75cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>B. General Company Description</Value>
+      </Textbox>
+      <Textbox Name="textbox16">
+        <Top>18.25cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A2c.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <Top>17.5cm</Top>
+        <Width>14.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>c. And how the money will make your business more profitable, thereby ensuring repayment.</Value>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <Top>16cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A2b.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <Top>15.25cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>b. precisely how you are going to use it,</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <Top>13.75cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A2a.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Top>13cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>a. state clearly how much you want,</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Top>12.25cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>2. If applying for a loan:</Value>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <Top>10.75cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A1d.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Top>10cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>d. What do you think the future holds for your business and your industry?</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>8.5cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A1c.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <Top>7.75cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>c. Who are the owners?</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Top>6.25cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A1b.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <Top>5.5cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>b. Who will your customers be?</Value>
+      </Textbox>
+      <Textbox Name="A1a">
+        <rd:DefaultName>A1a</rd:DefaultName>
+        <Top>4cm</Top>
+        <Width>15.25cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>1.25cm</Height>
+        <Value>=First(Fields!A1a.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>3.25cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>a. What will your product be?</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>2.75cm</Top>
+        <Width>8.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>1. Explain the fundamentals of the proposed business:</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>2cm</Top>
+        <Width>6.75cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>A.Executive Summary</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.75cm</Top>
+        <Width>10cm</Width>
+        <Style>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>5cm</Left>
+        <Height>0.75cm</Height>
+        <Value>Business Plan for a Startup Business</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>105.75cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>
