@@ -52,6 +52,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"onuraltun_ElimSende" /o:"onuraltun" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          nuget restore ElimSende.sln
-          msbuild ElimSende.sln
+          nuget restore MersinBAN.sln
+          msbuild MersinBAN.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
